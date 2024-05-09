@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="logo-container">
+      <img src="resources/logo.png" alt="logo" />
+    </div>
+    <div class="buttons">
+      <select name="from-currency" id="from-currency" class="countriesList">
+        <option>United States (USD)</option>
+      </select>
+
+      <span class="arrow"><i class="fa-solid fa-right-long"></i></span>
+
+      <select name="to-currency" id="to-currency" class="countriesList">
+        <option>India (INR)</option>
+      </select>
+
+      <input type="number" name="from-amount" class="from-amount" required />
+
+      <span class="equal"><i class="fa-solid fa-equals"></i></span>
+
+      <input type="text" name="to-amount" class="to-amount" readonly />
+
+      <button class="btn-convert">CONVERT</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

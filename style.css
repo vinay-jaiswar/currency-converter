@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+  position: relative;
+  background-color: #eef7ff;
+}
+
+.logo-container {
+  display: flex;
+  width: 40rem;
+  position: absolute;
+  left: 50vw;
+  top: 10vh;
+  transform: translate(-50%, 0);
+}
+
+.logo-container img {
+  width: 100%;
+}
+
+.buttons {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 0.5fr 1fr;
+
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+select {
+  width: 25rem;
+}
+
+select,
+input {
+  margin: 1rem;
+  text-align: center;
+  padding: 1.5rem 1.5rem;
+}
+
+.to-amount {
+  background-color: #f7fbff;
+}
+
+span {
+  margin: 1rem;
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+  color: #0d9276;
+}
+
+.btn-convert {
+  position: absolute;
+  bottom: -8rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  padding: 1rem 4rem;
+  cursor: pointer;
+}
+
+select,
+input,
+button {
+  font-size: 1.6rem;
+  border-radius: 4px;
+  border: 2px solid #402b3a;
+  box-shadow: 4px 4px #402b3a;
+  background-color: aliceblue;
+  color: #222;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  transition: all 0.2s ease-out;
+}
+
+button:hover {
+  background-color: rgba(99, 245, 143);
+}
+
+button:active {
+  background-color: rgba(99, 245, 143);
+}
+
+/* Hide the increment and decrement buttons */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+@media only screen and (max-width: 767px) {
+  .logo-container {
+    top: 12vh;
+    width: 35rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+
+  .from-amount {
+    order: 1;
+  }
+
+  .arrow {
+    order: 2;
+  }
+
+  #to-currency {
+    order: 2;
+  }
+
+  .to-amount {
+    order: 2;
+  }
+
+  .equal {
+    display: none;
+  }
+}
